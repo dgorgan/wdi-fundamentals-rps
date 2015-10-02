@@ -74,14 +74,11 @@ function playToFive() {
             computerWins += 1;        
          }      
          
-
-      main.innerHTML = ('Current player tally: ' + playerWins);
-       
-      main.innerHTML = ('Current computer tally: ' + computerWins);
+        main.innerHTML = ('Current player tally: ' + playerWins + '<br>' + 'Current computer tally: ' + computerWins);
     
      }
 
-    main.innerHTML = ("Winner is: " + ((playerWins > computerWins) ? 'Player!' : 'Computer!') + '<br>' + [playerWins, computerWins]);
+    main.innerHTML = ("Winner is: " + ((playerWins > computerWins) ? 'Player!' : 'Computer!') + '<br>' + '[' + [playerWins, computerWins] + ']');
     // console.log('Winner is: ' + ((playerWins > computerWins) ? 'Player!' : 'Computer!'));
 }
 
