@@ -76,9 +76,15 @@ function playToFive() {
     
      }
 
-    console.log('Winner is: ' + ((playerWins > computerWins) ? 'Player!' : 'Computer!'));
-    return [playerWins, computerWins];
+    document.write("<p>" + 'Winner is: ' + ((playerWins > computerWins) ? 'Player!' : 'Computer!' + "</p>" + "<p>" + [playerWins, computerWins] + "</p>"));
+    
+    
 }
+
+
+
+var play = document.getElementById('btn');
+play.addEventListener('click', playToFive, false);
 
 
     
