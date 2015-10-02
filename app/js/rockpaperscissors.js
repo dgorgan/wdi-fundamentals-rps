@@ -4,9 +4,10 @@
 'use strict';
 
 function getInput() {
-    console.log("Please choose either 'rock', 'paper', or 'scissors'.")
+    console.log("Please choose either 'rock', 'paper', or 'scissors'.");
     return prompt();
 }
+
 function randomPlay() {
     var randomNumber = Math.random();
     if (randomNumber < 0.33) {
@@ -54,12 +55,15 @@ function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
+
     
      while ((playerWins < 5) && (computerWins < 5)) {
 
+        var main =  document.getElementById('main');  
         var player = getPlayerMove;
         var computer = getComputerMove;
         var winner = getWinner(player(), computer());
+
 
          if(winner == 'player') {
             console.log('Player Won current match!');
@@ -70,21 +74,16 @@ function playToFive() {
             computerWins += 1;        
          }      
          
-      console.log('Current player tally: ' + playerWins);
+
+      main.innerHTML = ('Current player tally: ' + playerWins);
        
-      console.log('Current computer tally: ' + computerWins);
+      main.innerHTML = ('Current computer tally: ' + computerWins);
     
      }
 
-    document.write("<p>" + 'Winner is: ' + ((playerWins > computerWins) ? 'Player!' : 'Computer!' + "</p>" + "<p>" + [playerWins, computerWins] + "</p>"));
-    
-    
+    main.innerHTML = ("Winner is: " + ((playerWins > computerWins) ? 'Player!' : 'Computer!') + '<br>' + [playerWins, computerWins]);
+    // console.log('Winner is: ' + ((playerWins > computerWins) ? 'Player!' : 'Computer!'));
 }
-
-
 
 var play = document.getElementById('btn');
 play.addEventListener('click', playToFive, false);
-
-
-    
