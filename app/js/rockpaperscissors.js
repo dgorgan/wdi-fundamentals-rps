@@ -3,9 +3,10 @@
 ////////////////////////////////////////////////
 'use strict';
 
+
+
 function getInput() {
-    console.log("Please choose either 'rock', 'paper', or 'scissors'.");
-    return prompt();
+    return prompt("Please choose either 'rock', 'paper', or 'scissors'.");
 }
 
 function randomPlay() {
